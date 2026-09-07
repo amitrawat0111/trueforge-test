@@ -36,7 +36,27 @@ function chunk(array, size) {
   return result;
 }
 
+/**
+ * Returns a new array with the elements sorted in ascending order.
+ * Does not mutate the original array.
+ *
+ * @param {Array} array - The input array to sort.
+ * @returns {Array} A new array sorted in ascending order.
+ * @throws {TypeError} If the input is not an array.
+ */
+function sort(array) {
+  if (!Array.isArray(array)) {
+    throw new TypeError('Input must be an array');
+  }
+  return [...array].sort((a, b) => {
+    if (a < b) return -1;
+    if (a > b) return 1;
+    return 0;
+  });
+}
+
 module.exports = {
   unique,
   chunk,
+  sort,
 };
