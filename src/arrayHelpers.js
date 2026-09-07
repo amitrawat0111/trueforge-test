@@ -55,8 +55,39 @@ function sort(array) {
   });
 }
 
+/**
+ * Searches a sorted (ascending) array for the target value using binary search.
+ *
+ * @param {Array} array - The input array to search. Must be sorted in ascending order.
+ * @param {*} target - The value to search for.
+ * @returns {number} The index of the target if found, otherwise -1.
+ * @throws {TypeError} If the input is not an array.
+ */
+function binarySearch(array, target) {
+  if (!Array.isArray(array)) {
+    throw new TypeError('Input must be an array');
+  }
+
+  let low = 0;
+  let high = array.length - 1;
+
+  while (low <= high) {
+    const mid = Math.floor((low + high) / 2);
+    if (array[mid] === target) {
+      return mid;
+    } else if (array[mid] < target) {
+      low = mid + 1;
+    } else {
+      high = mid - 1;
+    }
+  }
+
+  return -1;
+}
+
 module.exports = {
   unique,
   chunk,
   sort,
+  binarySearch,
 };
