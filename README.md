@@ -22,3 +22,12 @@ Splits an array into consecutive groups of `size`.
 const { chunk } = require('./src/arrayHelpers');
 chunk([1, 2, 3, 4, 5], 2); // [[1, 2], [3, 4], [5]]
 ```
+
+### `sort(array)`
+Returns a new array with the elements sorted in ascending order (does not mutate the original).
+- Throws `TypeError` if input is not an array.
+
+```js
+const { sort } = require('./src/arrayHelpers');
+sort([3, 1, 2]); // [1, 2, 3]
+```
