@@ -31,3 +31,13 @@ Returns a new array with the elements sorted in ascending order (does not mutate
 const { sort } = require('./src/arrayHelpers');
 sort([3, 1, 2]); // [1, 2, 3]
 ```
+
+### `binarySearch(array, target)`
+Searches a sorted (ascending) array for `target` using binary search.
+- Throws `TypeError` if input is not an array.
+- Returns the index of `target` if found, otherwise `-1`.
+
+```js
+const { binarySearch } = require('./src/arrayHelpers');
+binarySearch([1, 2, 3, 4, 5], 4); // 3
+```
