@@ -1,0 +1,10 @@
+{
+  "name": "trueforge-test",
+  "version": "1.0.0",
+  "description": "trueforge-test project",
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [],
+  "license": "MIT"
+}
