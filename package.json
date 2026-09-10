@@ -1,0 +1,11 @@
+{
+  "name": "trueforge-test",
+  "version": "1.0.0",
+  "description": "trueforge-test project",
+  "main": "src/arrayHelpers.js",
+  "scripts": {
+    "test": "node test/arrayHelpers.test.js"
+  },
+  "keywords": [],
+  "license": "MIT"
+}
